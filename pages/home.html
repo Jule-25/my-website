@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-gray-100">
+
+  <header class="flex justify-between items-center 
+    px-5 mb-5 bg-gradient-to-br from-gray-50 to-green-50
+     shadow ">
+    <div class="flex-1 py-5">
+      <a href="home.html">
+        <img class="w-32 hover:scale-105 transition-transform" src="../assets/images/logo2.png" alt="logo">
+      </a>
+    </div>
+    <div>
+      <a href="#make_appoint">
+        <button class="px-5 bg-gray-800 text-white font-semibold
+        py-2 rounded 
+        transition-transform
+        duration-500
+        hover:scale-105" >Engagez moi</button></a>
+    </div>
+  </header>
+
+  <nav class="flex px-5 text-gray-400 font-sans bg-gray-800 
+    py-12">
+    <ul class="space-y-2">
+      <li><a class="hover:text-gray-500" href="#home">Accueil</a></li>
+      <li><a class="hover:text-gray-500" href="#about">À propos</a></li>
+      <li><a class="hover:text-gray-500" href="#contact">Contact</a></li>
+    </ul>
+    <div class="flex-1 flex flex-col justify-center  
+      items-center">
+      <span class="text-3xl text-white 
+      mb-2 transition-transform duration-700 hover:scale-105">Bonjour, Mon nom est Souleymane Sall</span>
+      <span>
+        <a href="#appoint">Comment puis je vous aider?</a>
+      </span>
+    </div>
+  </nav>
+
+  <main class="">
+    <!--My services-->
+    <section class=" bg-gradient-to-r from-green-100 to-green-50
+    py-16">
+      <h2 class="text-center font-bold  text-4xl text-gray-800">Mes Services</h2>
+      <p class="mt-4 text-lg text-center text-gray-600 max-w-2xl 
+         mx-auto">
+          Nous proposons des services professionnels pour vous accompagner dans votre croissance digitale et technologique.
+      </p>
+    </section>
+
+    <!--Services List-->
+    <div class="grid sm:grid-cols-1 lg:grid-cols-3 
+      gap-8 px-6 py-12">
+      <!--Web Development-->
+      <div class="bg-white py-4 flex-1 flex flex-col 
+        items-center font-semibold py-6 shadow rounded-2xl
+        transition-transform duration-500 hover:scale-105 
+        text-gray-800">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
+        </svg>
+        <h3 class="mt-4 text-xl font-semibold">Développement web</h3>
+        <p class="text-gray-600 text-center mt-2">Je crée des sites web modernes et performants pour présenter votre entreprise en ligne.</p>
+      </div>
+      <!--Office Training-->
+      <div class="bg-white py-4 flex flex-col items-center 
+        font-semibold text-gray-800 py-6 rounded-2xl
+        transition-transform duration-500 hover:scale-105">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zM12 14l6.16-3.422a12.083 12.083 0 01.84 4.422c0 5.523-4.477 10-10 10S2 20.523 2 15c0-1.577.408-3.057 1.12-4.338L12 14z" />
+        </svg>
+        <h3 class="mt-4 text-xl font-semibold">Formation aux logiciels de bureau</h3>
+        <p class="text-gray-600 text-center mt-2">Je peux former vos équipes à l’utilisation de Word, Excel et autres logiciels bureautiques.</p>
+      </div>
+
+      <!--Coding Training-->
+      <div class="bg-white py-4 flex flex-col items-center font-semibold 
+        text-gray-800 py-6 shadow transition-transform 
+        duration-500 hover:scale-105 rounded-2xl">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-pink-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.97-4.03 9-9 9S3 16.97 3 12 7.03 3 12 3s9 4.03 9 9z" />
+        </svg>
+        <h3 class="mt-4 text-xl font-semibold">Marketing sur les réseaux sociaux</h3>
+        <p class="text-gray-600 text-center mt-2">
+          Je peux vous aider à promouvoir votre entreprise sur Facebook, Instagram, LinkedIn et plus.
+        </p>
+      </div>
+    </div>
+
+    <!--My portofolio-->
+    <section class=" bg-gradient-to-r from-green-100 to-green-50
+      py-6">
+      <h2 class="text-center font-bold  text-3xl text-gray-700">Mes projets</h2>
+      <p class="text-center text-gray-500 leading-relaxed font-sans
+         mx-auto mb-5">
+          Voici certains des projets qu'on a développé utilisant
+          HTML, CSS, Javascript, Tailwindcss et PHP
+      </p>
+    </section>
+  </main>
+
+  <footer class="bg-gray-800 py-3 text-center text-white font-semibold mt-10">
+    &copy; 2025 Souleymane Sall. All rights reserved
+  </footer>
+  
+</body>
+</html>
