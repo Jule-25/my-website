@@ -64,18 +64,22 @@
     <!-- Contact Form -->
     <div>
       <h3 class="text-2xl font-semibold mb-6">Contactez-moi</h3>
-      <form class="space-y-5">
+      <form id="contact-form" class="space-y-5">
         <div>
           <label class="block mb-2 font-semibold">Prénom</label>
-          <input type="text" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-400">
+          <input type="text" id="firstName" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-400">
+        </div>
+        <div>
+          <label class="block mb-2 font-semibold">Nom</label>
+          <input type="text" id="lastName" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-400">
         </div>
         <div>
           <label class="block mb-2 font-semibold">Email</label>
-          <input type="email" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-400">
+          <input type="email" id="email" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-400">
         </div>
         <div>
           <label class="block mb-2 font-semibold">Message</label>
-          <textarea rows="4" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-400"></textarea>
+          <textarea rows="4" id="message" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-400"></textarea>
         </div>
         <button type="submit" class="bg-gray-800 text-white px-6 py-3 rounded-lg hover:scale-105 transition">
           Envoyer
@@ -88,6 +92,51 @@
   <footer class="bg-gray-800 text-white text-center py-4 mt-12">
     &copy; 2025 Souleymane Sall. Tous droits réservés.
   </footer>
+  <script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.2.0/firebase-app.js";
+  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.2.0/firebase-firestore.js";
+// Your Firebase config
+const firebaseConfig = {
+ apiKey: "AIzaSyC6FJVv80LXa8BT9gqIgOBQTuNuV2bCnv4",
+  authDomain: "my-portofolio-42bd7.firebaseapp.com",
+  projectId: "my-portofolio-42bd7",
+  storageBucket: "my-portofolio-42bd7.firebasestorage.app",
+  messagingSenderId: "1054246054627",
+  appId: "1:1054246054627:web:3dda00691937dae7a7f3d6"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+// Handle form submission
+const contactForm = document.getElementById('contact-form');
+
+contactForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const firstName = document.getElementById("firstName").value;
+  const lastName = document.getElementById("lastName").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  try {
+    await addDoc(collection(db, "contacts"), {
+      firstName,
+      lastName,
+      email,
+      message,
+      timestamp: new Date()
+    });
+    alert("Merci! Votre message a été envoyé.");
+    contactForm.reset();
+  } catch (error) {
+    console.error("Erreur: ", error);
+    alert("Erreur lors de l'envoi. Réessayez plus tard.");
+  }
+});
+
+  </script>
 
 </body>
 </html>
