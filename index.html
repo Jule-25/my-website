@@ -11,107 +11,218 @@
 </head>
 <body class="min-h-screen bg-gray-100">
 
-  <header class="flex justify-between items-center 
-    px-5 mb-5 bg-gradient-to-br from-gray-50 to-green-50
-     shadow ">
-    <div class="flex-1 py-5">
-      <a href="home.html">
-        <img class="w-32 hover:scale-105 transition-transform" src="logo2.png" alt="logo">
-      </a>
-    </div>
-    <div>
-      <a href="#make_appoint">
-        <button class="px-5 bg-gray-800 text-white font-semibold
-        py-2 rounded 
-        transition-transform
-        duration-500
-        hover:scale-105" >Engagez moi</button></a>
+  <header class="grid gap-8 py-10 lg:px-8 md:px-6 sm:px-3 
+      bg-[url('./téléchargement.jpeg')] 
+      bg-cover bg-center bg-no-repeat relative">
+
+    <!-- Overlay to darken background -->
+    <div class="absolute inset-0 bg-black/60"></div>
+
+    <!-- Content should sit above the overlay -->
+    <div class="relative z-10">
+      <!--Top section-->
+      <section class="flex justify-between mb-12">
+        <div>
+          <p class="text-3xl font-semibold text-white hover:text-green-500">JULE TECH</p>
+        </div>
+        <nav>
+          <ul class="flex space-x-6 items-center mt-2 mr-2 text-gray-400 text-sm font-semibold">
+            <li><a class="hover:text-green-500" href="#">Acceuil</a></li>
+            <li><a class="hover:text-green-500" href="#services">Services</a></li>
+            <li><a class="hover:text-green-500" href="#portofolio">Portefeuille</a></li>
+            <li><a class="hover:text-green-500" href="#">Prix</a></li>
+            <li><a class="hover:text-green-500" href="#about-me">À propos</a></li>
+            <li><a class="hover:text-green-500" href="#contacts">Contacts</a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <section class="flex flex-col items-center w-full max-w-3xl mx-auto px-6 py-10">
+        <h1 class="lg:text-6xl md:text-4xl sm:text-3xl font-semibold mt-2 mb-5 text-white">Bienvenue sur <span class="text-green-500">JULE TECH</span></h1>
+        <p class="text-center text-sm leading-relaxed text-gray-300 mb-5 px-6">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim eveniet consectetur a labore. Amet atque laborum eaque ut voluptate perspiciatis nisi ad similique maiores officia, minima, eius deleniti quis dolore?
+        </p>
+        <a href="#contacts">
+          <button class="bg-white px-6 py-2 rounded-lg mt-3">Commencez votre projet</button>
+        </a>
+      </section>
     </div>
   </header>
 
-  <nav class="grid  px-5 text-gray-400 font-sans bg-gray-800 
-    py-12 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 gap-8 sm:space-y-6">
-    <ul class="space-y-2">
-      <li><a class="hover:text-gray-500" href="index.html">Accueil</a></li>
-      <li><a class="hover:text-gray-500" href="about.html">À propos</a></li>
-      <li><a class="hover:text-gray-500" href="contact.html">Contact</a></li>
-    </ul>
-    <div class="md:col-span-2 lg:col-span-2 flex flex-col justify-center  
-      lg:items-start md:items-start sm:items-center">
-      <span class="text-3xl text-white 
-      mb-2 transition-transform duration-700 hover:scale-105">Bonjour, Mon nom est Souleymane Sall</span>
-      <span class="">
-        <a href="contact.html">Comment puis je vous aider?</a>
-      </span>
-    </div>
-  </nav>
 
-
-  <main class="">
-    <!--My services-->
-    <section class=" bg-gradient-to-r from-green-100 to-green-50
-    py-16">
-      <h2 class="text-center font-bold  text-4xl text-gray-800">Mes Services</h2>
-      <p class="mt-4 text-lg text-center text-gray-600 max-w-2xl 
-         mx-auto">
-          Nous proposons des services professionnels pour vous accompagner dans votre croissance digitale et technologique.
-      </p>
-    </section>
-
+  <!--Services-->
+  <section id="services" class="max-7xl px-6 mt-10 font-semibold text-gray-800 mb-10">
+    <h2 class="text-gray-800 text-3xl font-semibold mb-5 ml-6">Mes Services</h2>
     <!--Services List-->
-    <div class="grid sm:grid-cols-1 lg:grid-cols-3 
-      gap-8 px-6 py-12">
-      <!--Web Development-->
-      <div class="bg-white py-4 flex-1 flex flex-col 
-        items-center font-semibold py-6 shadow rounded-2xl
-        transition-transform duration-500 hover:scale-105 
-        text-gray-800">
+    <div class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3
+      transition-transform px-6">
+      <!--Web development-->
+      <div class="flex flex-col py-8 items-center shadow-lg py-6 border rounded-lg">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
         </svg>
-        <h3 class="mt-4 text-xl font-semibold">Développement web</h3>
-        <p class="text-gray-600 text-center mt-2">Je crée des sites web modernes et performants pour présenter votre entreprise en ligne.</p>
+        <h2 class="mt-3 text-2xl">Développement web</h2>
+        <p class="text-gray-600 max-w-md mt-2 text-center">Nous créons des sites web modernes et performants pour présenter votre entreprise en ligne.</p>
       </div>
-      <!--Office Training-->
-      <div class="bg-white py-4 flex flex-col items-center 
-        font-semibold text-gray-800 py-6 rounded-2xl
-        transition-transform duration-500 hover:scale-105">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <!--Office app training-->
+      <div class="flex flex-col items-center shadow-lg py-6 border rounded-lg">
+         <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zM12 14l6.16-3.422a12.083 12.083 0 01.84 4.422c0 5.523-4.477 10-10 10S2 20.523 2 15c0-1.577.408-3.057 1.12-4.338L12 14z" />
-        </svg>
-        <h3 class="mt-4 text-xl font-semibold">Formation aux logiciels de bureau</h3>
-        <p class="text-gray-600 text-center mt-2">Je peux former vos équipes à l’utilisation de Word, Excel et autres logiciels bureautiques.</p>
+          <h2 class="mt-3 text-2xl">Formation aux logiciels de bureau</h2>
+          <p class="text-gray-600 max-w-md mt-2 text-center">Nous pouvons former vos équipes à l’utilisation de Word, Excel et autres logiciels bureautiques.</p>
+      </div>
+      <!--Translation services-->
+      <div class="flex flex-col items-center shadow-lg py-6 border rounded-lg">
+          <!-- Book icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" 
+              class="w-12 h-12 text-blue-600" 
+              fill="currentColor" 
+              viewBox="0 0 24 24">
+            <path d="M4 19.5A2.5 2.5 0 016.5 17H20m-16 2.5V6.75
+                    A2.75 2.75 0 016.75 4h12.5A2.75 2.75 0 0122 6.75V17
+                    m-18 2.5A2.5 2.5 0 006.5 22H20V17H6.5a2.5 2.5 0 00-2.5 2.5z"/>
+          </svg>
+
+          <!-- Texte -->
+          <h2 class="mt-3 text-2xl font-semibold">Traduction de livres français en anglais</h2>
+          <p class="text-gray-600 max-w-md mt-2 text-center">
+            Nous proposons des services de traduction pour les auteurs et les blogueurs.  
+            Nous pouvons traduire vos contenus en anglais avec précision et qualité.
+          </p>
       </div>
 
-      <!--Coding Training-->
-      <div class="bg-white py-4 flex flex-col items-center font-semibold 
-        text-gray-800 py-6 shadow transition-transform 
-        duration-500 hover:scale-105 rounded-2xl">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-pink-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.97-4.03 9-9 9S3 16.97 3 12 7.03 3 12 3s9 4.03 9 9z" />
-        </svg>
-        <h3 class="mt-4 text-xl font-semibold">Marketing sur les réseaux sociaux</h3>
-        <p class="text-gray-600 text-center mt-2">
-          Je peux vous aider à promouvoir votre entreprise sur Facebook, Instagram, LinkedIn et plus.
-        </p>
+    </div>
+  </section>
+
+  
+  <h2 class="max-w-7xl px-10 mt-20 text-gray-800 text-3xl font-semibold mb-5">Portefeuille</h2>
+  <!--Portofolio-->
+  <section id="portofolio" class="bg-gray-50 px-6 font-semibold text-gray-800 mb-10">
+    <div class="bg-white px-6 py-6 grid gap-10 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+      <!--Single Project-->
+      <div class="bg-white flex flex-col py-8 px-6 shadow-lg border rounded-lg">
+          <video 
+            class="w-full rounded-lg mb-4" 
+            controls 
+            autoplay 
+            muted 
+            loop
+          >
+            <source src="assets/videos/project1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+
+          <h2 class="text-xl text-gray-800 mb-2">
+            Une boutique en ligne que nous avons créer pour un de nos clients
+          </h2>
+
+          <p class="text-gray-600">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, consequatur ut reiciendis provident nulla deserunt, hic quasi dignissimos repudiandae eligendi fuga, aut ratione incidunt ducimus a culpa quae quaerat. Error?
+          </p>
+      </div>
+
+      <!--Single Project-->
+      <div class="bg-white flex flex-col py-8 px-6 shadow-lg border rounded-lg">
+          <video 
+            class="w-full rounded-lg mb-4" 
+            controls 
+            autoplay 
+            muted 
+            loop
+          >
+            <source src="assets/videos/project2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+
+          <h2 class="text-xl text-gray-800 mb-2">
+           Une application web que nous avons créer pour permettre
+           aux blogger to publier l'autre blog
+          </h2>
+
+          <p class="text-gray-600">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, consequatur ut reiciendis provident nulla deserunt, hic quasi dignissimos repudiandae eligendi fuga, aut ratione incidunt ducimus a culpa quae quaerat. Error?
+          </p>
+      </div>
+
+    </div>
+  </section>
+  
+  <!--About me-->
+  <section id="about-me" class="max-7xl px-6 mt-10 font-semibold text-gray-800 mb-10">
+    <h2 class="text-gray-800 text-3xl font-semibold mb-5 ml-6 text-center">À propos</h2>
+    <div class="max-w-md mx-auto shadow-lg border rounded-lg py-6 px-6 mt-10">
+      <img src="bitmap.png" alt="" class="w-32 h-32 mx-auto mb-4 rounded-full object-cover">
+      <h2 class="text-center text-2xl mb-2">Souleymane Sall</h2>
+      <p class="text-gray-600"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat aut dicta consectetur ex libero alias. Tempore, autem quos velit nesciunt earum placeat! Recusandae eaque nisi unde velit magnam ratione soluta?</p>
+    </div>
+  </section>
+
+  <!--Contact me-->
+   <h2 class="text-gray-800 px-10 mt-20 text-3xl font-semibold mb-5 ml-6 text-center">Contactez moi</h2>
+   <section id="contacts" class="max-7xl bg-white mb-10 px-6 py-6 font-semibold text-gray-800 mb-10 grid gap-8 md:grid-cols-2 sm:grid-cols-1">
+    <!--Left Section-->
+    <div class="max-w-3xl mx-auto shadow-lg border h-64 px-6 py-6 rounded-lg">
+      <h1 class="text-center text-2xl text-gray-800 mb-3">Info Personel</h1>
+      <div class="grid grid-cols-2 gap-2">
+        <span>Prénom:</span>
+        <span class="text-sm text-gray-600">Souleymane</span>
+      </div>
+      <div class="grid grid-cols-2 gap-2">
+        <span>Nom:</span>
+        <span class="text-sm text-gray-600">Sall</span>
+      </div>
+      <div class="grid grid-cols-2 gap-2">
+        <span>Email:</span>
+        <span class="text-sm text-gray-600">souleymanesall985@gmail.com</span>
+      </div>
+      <div class="grid grid-cols-2 gap-2">
+        <span>Location:</span>
+        <span class="text-sm text-gray-600">Saint-Louis, Podor</span>
       </div>
     </div>
+    <!--Right section-->
+    <form id="contact-form" class="w-full flex flex-col space-y-4 shadow px-4">
+      <h2 class="text-center text-gray-600 text-lg">Contactez nous</h2>
+      <!--First Name-->
+      <div class="grid grid-cols-5">
+        <label for="firstName" class="mt-2">Prénom: </label>
+        <input type="text" name="firstName" id="firstName" placeholder="Entrer votre prénom"
+          class="col-span-4 bg-gray-100 border rounded-lg px-4 py-2 focus:outline-none focus:ring-2
+          focus:ring-gray-400">
+      </div>
+      <!--Last Name-->
+      <div class="grid grid-cols-5">
+        <label for="lastName" class="mt-2">Nom: </label>
+        <input type="text" name="lastName" id="lastName" placeholder="Entrer votre nom"
+          class="col-span-4 bg-gray-100 border rounded-lg px-4 py-2 focus:outline-none focus:ring-2
+          focus:ring-gray-400">
+      </div>
+      <!--Email-->
+      <div class="grid grid-cols-5">
+        <label for="email" class="mt-2">Email: </label>
+        <input type="email" name="email" id="email" placeholder="vous@exemple.com"
+          class="col-span-4 bg-gray-100 border rounded-lg px-4 py-2 focus:outline-none focus:ring-2
+          focus:ring-gray-400">
+      </div>
+      <!--Message-->
+      <div class="grid grid-cols-5">
+        <label for="message" class="mt-2">Message: </label>
+        <textarea name="message" id="message" placeholder="Entrer un message" rows="8"
+        class="col-span-4 bg-gray-100 border rounded-lg px-4 py-2 focus:outline-none focus:ring-2
+          focus:ring-gray-400"></textarea>
+      </div>
 
-    <!--My portofolio-->
-    <section class=" bg-gradient-to-r from-green-100 to-green-50
-      py-6">
-      <h2 class="text-center font-bold  text-3xl text-gray-700">Mes projets</h2>
-      <p class="text-center text-gray-500 leading-relaxed font-sans
-         mx-auto mb-5">
-          Voici certains des projets qu'on a développé utilisant
-          HTML, CSS, Javascript, Tailwindcss et PHP
-      </p>
-    </section>
-  </main>
+      <!--Send button-->
+      <button class="bg-green-500 max-w-lg mx-auto text-white font-bold px-4 py-2 rounded-lg shadow mt-10
+        hover:bg-green-600">Envoyer</button>
+    </form>
+  </section>
 
-  <footer class="bg-gray-800 py-3 text-center text-white font-semibold mt-10">
-    &copy; 2025 Souleymane Sall. All rights reserved
+  <!--Footer-->
+  <footer class="w-full py-4 bg-gray-800 text-center text-gray-300">
+    &copy;2025 <span class="text-green-600">JULE TECH</span>. All rights reserved.
   </footer>
-  
+
+  <script type="module" src="index.js"></script>
 </body>
 </html>
